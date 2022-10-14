@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import av
 import mediapipe as mp
+import streamlit
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 
 st.title('AppliedRoots Project')
