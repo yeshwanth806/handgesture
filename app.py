@@ -4,14 +4,24 @@ import av
 import mediapipe as mp
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 
-mp_drawing = mp.solutions.drawing_utils
-mp_drawing_styles = mp.solutions.drawing_styles
-mp_hands = mp.solutions.hands
-hands = mp_hands.Hands(
-    model_complexity=0,
-    min_detection_confidence=0.5,
-    min_tracking_confidence=0.5
-)
+st.title('AppliedRoots Project')
+
+cap = cv2.VideoCapture(0)
+
+mpHands = mp.solutions.hands
+hands = mpHands.Hands()
+mpDraw = mp.solutions.drawing_utils
+fingerCoordinates = [(8, 6), (12, 10), (16, 14), (20, 18)]
+thumbCoordinate = (4,2)
+
+# mp_drawing = mp.solutions.drawing_utils
+# mp_drawing_styles = mp.solutions.drawing_styles
+# mp_hands = mp.solutions.hands
+# hands = mp_hands.Hands(
+#     model_complexity=0,
+#     min_detection_confidence=0.5,
+#     min_tracking_confidence=0.5
+# )
 
 def process(img):
     img.flags.writeable = False
