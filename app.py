@@ -13,9 +13,9 @@ hands = mp_hands.Hands(
     min_tracking_confidence=0.5
 )
 
-def process(image):
-    image.flags.writeable = False
-    imgRGB = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+def process(img):
+    img.flags.writeable = False
+    imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     results = hands.process(imgRGB)
     multiLandMarks = results.multi_hand_landmarks
 
