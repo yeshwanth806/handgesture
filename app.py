@@ -51,9 +51,9 @@ def process(img):
         if handPoints[thumbCoordinate[0]][0] > handPoints[thumbCoordinate[1]][0]:
             upCount += 1
 
-        cv2.putText(img, str(upCount), (150,150), cv2.FONT_HERSHEY_PLAIN, 12, (0,255,0), 12)
+        return cv2.putText(img, str(upCount), (150,150), cv2.FONT_HERSHEY_PLAIN, 12, (0,255,0), 12)
         
-        return cv2.flip(image, 1)
+#         return cv2.flip(image, 1)
 
 #     cv2.imshow("Project Applied Root", img)
 #     cv2.waitKey(1)
