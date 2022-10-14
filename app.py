@@ -7,7 +7,7 @@ from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 
 st.title('AppliedRoots Project')
 
-cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture(0)
 
 mpHands = mp.solutions.hands
 hands = mpHands.Hands()
