@@ -48,10 +48,10 @@ while True:
     cv2.imshow("Project Applied Root", img)
     cv2.waitKey(1)
 cv2.destroyWindow('Project Applied Root')
-exit()
+# exit()
 
-if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+# if cv2.waitKey(1) & 0xFF == ord('q'):
+#         break
 # # cap = cv2.VideoCapture(0)
 
 # # mpHands = mp.solutions.hands
